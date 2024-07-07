@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.BayuNurIndraJatiIrawan">
+
+    <!-- Izin Internet -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Izin kamera -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <!-- Izin akses lokasi -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Rekomendasi Wisata"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RekomendasiWisata"
+        tools:replace="android:icon, android:theme"
+        tools:targetApi="31">
+
+        <!-- Activity untuk menangani kamera -->
+        <activity
+            android:name=".Camera"
+            android:exported="true"
+            android:label="Kamera">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Activity untuk menangani peta (maps) -->
+        <activity
+            android:name=".Maps"
+            android:exported="true"
+            android:label="Peta">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Daftar activity lainnya -->
+        <activity android:name=".About" android:exported="true"/>
+        <activity android:name=".Kampoong" android:exported="true"/>
+        <activity android:name=".GudegPawon" android:exported="true"/>
+        <activity android:name=".Vihara" android:exported="true"/>
+        <activity android:name=".Gereja" android:exported="true"/>
+        <activity android:name=".Masjid" android:exported="true"/>
+        <activity android:name=".WisataReligi" android:exported="true"/>
+        <activity android:name=".WisataKuliner" android:exported="true"/>
+        <activity android:name=".Pustaka" android:exported="true"/>
+        <activity android:name=".KebunBinatang" android:exported="true"/>
+        <activity android:name=".Museum" android:exported="true"/>
+        <activity android:name=".WisataEdukasi" android:exported="true"/>
+        <activity android:name=".GumukPasirParangkusumo" android:exported="true"/>
+        <activity android:name=".GeoforestWatuPayung" android:exported="true"/>
+        <activity android:name=".GunungMerapi" android:exported="true"/>
+        <activity android:name=".PuncakBecici" android:exported="true"/>
+        <activity android:name=".AirTerjun" android:exported="true"/>
+        <activity android:name=".WisataAlam" android:exported="true"/>
+        <activity android:name=".GuaKidang" android:exported="true"/>
+        <activity android:name=".Alam" android:exported="true"/>
+        <activity android:name=".MenuUtama" android:exported="true"/>
+        <activity android:name=".Api" android:exported="true"/>
+        <activity android:name=".DatabaseLoginActivity" android:exported="true"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
